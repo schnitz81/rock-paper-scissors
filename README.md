@@ -9,5 +9,5 @@ Just compile the single source file.
 ### Build
 ```docker build . -t rock-paper-scissors```
 ### Run
-Must be run interactively:
+Must be run interactively:<br>
 ```docker run --name rock-paper-scissors --rm -it rock-paper-scissors```
