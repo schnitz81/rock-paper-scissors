@@ -5,7 +5,7 @@ Rock, Paper, Scissors terminal game
 Just compile the single source file.
 ```gcc -o rock-paper-scissors rock-paper-scissors.c```
 
-## Docker
+## Docker (alternative)
 ### Build
 ```docker build . -t rock-paper-scissors```
 ### Run
