@@ -26,13 +26,13 @@ int getCpuChoice() // Function to return a random number.
 
 int getPlayerChoice()
 {
-	char ch='0';
+	char ch;
 	printf("\n\n--------------------------------");
 	printf("\n(R)ock (P)aper (S)cissors (Q)uit\n");
 	printf("(1)    (2)     (3)\n");
 	while(1){
 		printf(">");
-		scanf("%c%*c",&ch);
+		scanf("%c",&ch);
 		if(ch == 27 || ch == 'q' || ch == 'Q'){
 			printf("\nGame Over.\n");
 			printScore();
@@ -44,6 +44,8 @@ int getPlayerChoice()
 			return PAPER;
 		else if(ch == '3' || ch == 's' || ch == 'S')
 			return SCISSORS;
+		else if(ch=='\n')
+			printf("\b"); // consume newline from stdin
 		else
 			printf("Invalid choice.\n");
 	}
