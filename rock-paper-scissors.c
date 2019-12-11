@@ -94,7 +94,13 @@ int main()
 {
 	enum choice humanChoice;
 	enum choice cpuChoice;
+	int i,n;
 	srand(time(NULL));  // Randomizing seed.
+	printf("\n\nWarming up random number generator...");
+	for(i=0;i<10;i++){  // Reducing entropy starvation.
+		n=getCpuChoice();
+		printf(" %i",n);
+	}
 	while(1){
 		humanChoice = getPlayerChoice();
 		cpuChoice = getCpuChoice();
