@@ -97,7 +97,10 @@ int main()
 	int i,n;
 	srand(time(NULL));  // Randomizing seed.
 	printf("\n\nWarming up random number generator...");
-	for(i=0;i<10;i++){  // Reducing entropy starvation.
+	for(i=0;i<30;i++){  // Reducing entropy starvation.
+		while(getCpuChoice()*getCpuChoice() != 2){
+			printf(" %i", getCpuChoice());
+		}
 		n=getCpuChoice();
 		printf(" %i",n);
 	}
